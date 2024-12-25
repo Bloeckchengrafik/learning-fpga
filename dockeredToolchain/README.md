@@ -2,5 +2,5 @@
 > Built for Sipeed Tang Nano 9k
 
 ```sh
-alias gowinc="docker run -it -v .:/mnt/app Bloeckchengrafik/gowinc"
+alias gowinc="docker run -it -v .:/mnt/app cbergschneider/gowinc"
 ```
