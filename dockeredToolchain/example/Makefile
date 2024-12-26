@@ -11,6 +11,13 @@ build:
 upload:
 	openFPGALoader -b tangnano9k build/pack.fs
 
+upload-nv:
+	openFPGALoader -b tangnano9k -f build/pack.fs
+
 run:
+	docker run -v .:/mnt/app -w /mnt/app -it cbergschneider/gowinc make build
+	make upload
+
+run-nv:
 	docker run -v .:/mnt/app -w /mnt/app -it cbergschneider/gowinc make build
 	make upload
